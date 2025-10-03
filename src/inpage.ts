@@ -2755,6 +2755,11 @@ ${sourceCode.substring(0, 4000)} // Limit to 4000 chars for API
       /* Reward System Styles */
       .rugsense-reward-container {
         padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
       }
       
       .rugsense-reward-info {
@@ -2795,6 +2800,13 @@ ${sourceCode.substring(0, 4000)} // Limit to 4000 chars for API
         margin-bottom: 20px;
       }
       
+      @media (max-width: 600px) {
+        .rugsense-reward-stats {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+      }
+      
       .rugsense-stat-item {
         background: #f8fafc;
         padding: 15px;
@@ -2812,6 +2824,9 @@ ${sourceCode.substring(0, 4000)} // Limit to 4000 chars for API
         font-size: 18px;
         font-weight: bold;
         color: #1e293b;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-all;
       }
       
       .rugsense-reward-history h4 {
@@ -2850,6 +2865,9 @@ ${sourceCode.substring(0, 4000)} // Limit to 4000 chars for API
         color: #64748b;
         font-family: monospace;
         margin-bottom: 4px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-all;
       }
       
       .rugsense-reward-time {
@@ -3127,6 +3145,8 @@ ${sourceCode.substring(0, 4000)} // Limit to 4000 chars for API
         align-items: center !important;
         justify-content: center !important;
         padding: 20px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
       }
       
       .rugsense-modal-container {
@@ -3141,6 +3161,8 @@ ${sourceCode.substring(0, 4000)} // Limit to 4000 chars for API
         flex-direction: column !important;
         width: 100% !important;
         max-width: 600px !important;
+        box-sizing: border-box !important;
+        min-width: 0 !important;
       }
       
       .rugsense-modal-large {
@@ -3194,7 +3216,10 @@ ${sourceCode.substring(0, 4000)} // Limit to 4000 chars for API
       .rugsense-modal-content {
         padding: 24px !important;
         overflow-y: auto !important;
+        overflow-x: hidden !important;
         flex: 1 !important;
+        box-sizing: border-box !important;
+        min-width: 0 !important;
       }
       
       /* Info Cards */
@@ -3327,6 +3352,9 @@ ${sourceCode.substring(0, 4000)} // Limit to 4000 chars for API
         color: white !important;
         font-size: 14px !important;
         transition: all 0.2s ease !important;
+        min-width: 0 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
       }
       
       .rugsense-address-input:focus {
@@ -4304,7 +4332,7 @@ ${sourceCode.substring(0, 4000)} // Limit to 4000 chars for API
             
             <div class="rugsense-reward-form">
               <label for="rugsense-aptos-address">Aptos Address:</label>
-              <input type="text" id="rugsense-aptos-address" placeholder="Enter your Aptos address (0x + 64 hex chars)..." class="rugsense-address-input" />
+              <input type="text" id="rugsense-aptos-address" placeholder="Enter your Aptos address..." class="rugsense-address-input" />
               <button id="rugsense-save-aptos-address" class="rugsense-btn rugsense-btn-primary">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
@@ -4436,7 +4464,14 @@ ${sourceCode.substring(0, 4000)} // Limit to 4000 chars for API
       'rugsense-current-address'
     );
     if (currentAddressEl) {
-      currentAddressEl.textContent = address;
+      // Adresi kısalt: ilk 6 karakter + ... + son 4 karakter
+      const shortenedAddress =
+        address.length > 10
+          ? `${address.substring(0, 6)}...${address.substring(
+              address.length - 4
+            )}`
+          : address;
+      currentAddressEl.textContent = shortenedAddress;
     }
   }
 
