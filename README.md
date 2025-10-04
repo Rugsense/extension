@@ -26,11 +26,11 @@ A comprehensive browser extension that provides real-time security analysis for 
 
 ### Aptos Blockchain Reward System
 
-- **Token Rewards**: Earn ALGO tokens for first-time contract analysis submissions
+- **Token Rewards**: Earn APT tokens for first-time contract analysis submissions
 - **Smart Contract Integration**: Aptos-based reward distribution system
 - **Duplicate Prevention**: Blockchain caching prevents duplicate analysis submissions
-- **Multi-wallet Support**: Compatible with Pera Wallet, MyAlgo Wallet, and AlgoSigner
-- **Testnet Integration**: Secure testing environment with ALGO testnet tokens
+- **Multi-wallet Support**: Compatible with Petra Wallet, MyAlgo Wallet, and AlgoSigner
+- **Testnet Integration**: Secure testing environment with APT testnet tokens
 
 ### Modern User Interface
 
