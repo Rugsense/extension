@@ -24,10 +24,10 @@ A comprehensive browser extension that provides real-time security analysis for 
 - **Risk Assessment**: Comprehensive scoring system (0-100) with specific recommendations
 - **Smart Contract Bytecode Analysis**: Real-time analysis of contract code and behavior
 
-### Algorand Blockchain Reward System
+### Aptos Blockchain Reward System
 
 - **Token Rewards**: Earn ALGO tokens for first-time contract analysis submissions
-- **Smart Contract Integration**: Algorand-based reward distribution system
+- **Smart Contract Integration**: Aptos-based reward distribution system
 - **Duplicate Prevention**: Blockchain caching prevents duplicate analysis submissions
 - **Multi-wallet Support**: Compatible with Pera Wallet, MyAlgo Wallet, and AlgoSigner
 - **Testnet Integration**: Secure testing environment with ALGO testnet tokens
@@ -47,10 +47,10 @@ A comprehensive browser extension that provides real-time security analysis for 
 Browser Extension <-> Extension Backend <-> Blockchain Networks
        |                    |                    |
    Web3 Apps          AI Analysis Engine    Smart Contracts
-(Remix, Uniswap)     (Pattern Recognition)   (Algorand/Ethereum)
+(Remix, Uniswap)     (Pattern Recognition)   (Aptos/Ethereum)
        |                    |                    |
    Content Scripts      Background Service   Reward System
-   (Transaction         (Event Monitoring)    (ALGO Tokens)
+   (Transaction         (Event Monitoring)    (APT Tokens)
     Detection)
 ```
 
@@ -85,7 +85,7 @@ The extension follows a three-layer architecture:
 - **Base Network**: Coinbase's L2 for faster transactions
 - **Optimism**: Ethereum L2 scaling solution
 - **Sepolia Testnet**: Testing environment for development
-- **Algorand**: Reward system and token distribution
+- **Aptos**: Reward system and token distribution
 
 #### Development Tools
 
@@ -94,38 +94,37 @@ The extension follows a three-layer architecture:
 - **WebSocket Connections**: Real-time blockchain event monitoring
 - **Chrome Storage API**: Local data persistence
 
-## 🔗 Algorand Token Reward System
+## 🔗 Aptos Token Reward System
 
 ### Reward Mechanism
 
-The Rugsense extension implements a sophisticated reward system built on the Algorand blockchain:
+The Rugsense extension implements a sophisticated reward system built on the Aptos blockchain:
 
 #### Smart Contract Features
 
-- **Contract Address**: Deployed on Algorand Testnet for secure testing
+- **Contract Address**: Deployed on Aptos Testnet for secure testing
 - **Reward Function**: `submit_analysis(contract_id, risk_level, summary)`
-- **Token Distribution**: 0.01 ALGO tokens for first-time analysis submissions
+- **Token Distribution**: 0.01 APT tokens for first-time analysis submissions
 - **Duplicate Prevention**: Blockchain-based caching prevents duplicate rewards
 
 #### Supported Wallets
 
-- **Pera Wallet**: Official Algorand wallet with full feature support
-- **MyAlgo Wallet**: Browser-based wallet for easy integration
-- **AlgoSigner**: Browser extension wallet for Algorand
+- **Petra Wallet**: Official Aptos wallet with full feature support
+- **Pontem Wallet**: Browser-based wallet for easy integration
 
 #### Reward Process
 
 1. **Contract Analysis**: User analyzes a smart contract using the extension
-2. **Blockchain Submission**: Analysis results are submitted to Algorand smart contract
+2. **Blockchain Submission**: Analysis results are submitted to Aptos smart contract
 3. **Verification**: System verifies the analysis is unique and valid
-4. **Token Distribution**: ALGO tokens are automatically distributed to user's wallet
+4. **Token Distribution**: APT tokens are automatically distributed to user's wallet
 5. **Transaction Confirmation**: User receives confirmation of reward distribution
 
 ### Integration Benefits
 
 - **Incentivized Security**: Users are rewarded for contributing to Web3 security
 - **Decentralized Rewards**: No central authority controls token distribution
-- **Transparent System**: All transactions are recorded on Algorand blockchain
+- **Transparent System**: All transactions are recorded on Aptos blockchain
 - **Scalable Architecture**: Can handle thousands of analysis submissions
 
 ## 🛠️ Installation & Setup
@@ -134,7 +133,7 @@ The Rugsense extension implements a sophisticated reward system built on the Alg
 
 - Node.js 18+ and npm
 - Chrome or Chromium-based browser
-- Algorand wallet (Pera Wallet recommended)
+- Aptos wallet (Petra Wallet recommended)
 
 ### Installation Steps
 
@@ -163,10 +162,10 @@ npm run build
    - Enable "Developer mode"
    - Click "Load unpacked" and select the project directory
 
-5. **Configure Algorand wallet**:
-   - Install Pera Wallet browser extension
-   - Connect to Algorand Testnet
-   - Fund wallet with testnet ALGO tokens
+5. **Configure Aptos wallet**:
+   - Install Petra Wallet browser extension
+   - Connect to Aptos Testnet
+   - Fund wallet with testnet Aptos tokens
 
 ### Development Commands
 
@@ -190,7 +189,7 @@ npm run preview
 
 1. **Install Extension**: Load the extension in your browser
 2. **Connect Wallet**: Connect your Ethereum wallet (MetaMask, WalletConnect)
-3. **Add Algorand Wallet**: Connect Pera Wallet for reward system
+3. **Add Aptos Wallet**: Connect Petra Wallet for reward system
 4. **Configure Addresses**: Add wallet addresses to monitor
 
 ### Contract Analysis
@@ -199,7 +198,7 @@ npm run preview
 2. **Automatic Detection**: Extension detects contract interactions
 3. **Real-time Analysis**: Security analysis runs automatically
 4. **Risk Assessment**: Receive instant risk level and recommendations
-5. **Earn Rewards**: First-time analysis submissions earn ALGO tokens
+5. **Earn Rewards**: First-time analysis submissions earn APT tokens
 
 ### Address Monitoring
 
@@ -391,7 +390,7 @@ Rugsense is provided for educational and security analysis purposes. Users shoul
 
 ## 🌟 Acknowledgments
 
-- **Algorand Foundation**: For blockchain infrastructure and support
+- **Aptos Foundation**: For blockchain infrastructure and support
 - **Ethereum Community**: For Web3 standards and protocols
 - **Security Researchers**: For vulnerability research and best practices
 - **Open Source Contributors**: For the tools and libraries that make this possible
