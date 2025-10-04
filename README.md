@@ -141,8 +141,8 @@ The Rugsense extension implements a sophisticated reward system built on the Alg
 1. **Clone the repository**:
 
 ```bash
-git clone https://github.com/aysenur-aydin/rugsense-extension.git
-cd rugsense-extension
+git clone https://github.com/Rugsense/extension.git
+cd extension
 ```
 
 2. **Install dependencies**:
